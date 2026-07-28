@@ -3,7 +3,7 @@ name: "Publish Release"
 on:
   push:
     tags:
-      - 'v*' 
+      - 'v*'
 
 jobs:
   publish-release:
@@ -24,22 +24,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-     
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-   
       - name: Install Rust stable
         uses: dtolnay/rust-toolchain@stable
 
-      
-      - name: Install frontend dependencies
+      - name: Install dependencies (Windows/Linux)
+        if: matrix.platform != 'macos-latest'
+        run: npm install
+
+      - name: Install dependencies (macOS)
+        if: matrix.platform == 'macos-latest'
         run: npm install
 
       - name: Build Tauri App
-        uses: tauri-apps/tauri-action@v0
+        uses: tauri-apps/tauri-action@v0.5.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
