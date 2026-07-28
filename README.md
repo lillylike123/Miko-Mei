@@ -10,4 +10,4 @@ Made for the Unfold ysws!!!
 Using Tauri as well <3
 
 
-![alt text](unfold-personal-mood-&-productivity-logger.png)
+u![alt text](image.png)
