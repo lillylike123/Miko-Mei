@@ -47,11 +47,25 @@ fn add_journal_entry(app: tauri::AppHandle, content: String) -> Result<JournalEn
     Ok(entry)
 }
 
+#[command]
+fn get_journal_entries(app: tauri::AppHandle) -> Result<Vec<JournalEntry>, String> {
+    let app_dir = app.path().app_data_dir().map_err(|e| e.to_string())?;
+    let file_path = app_dir.join("journal_logs.json");
+
+    if !file_path.exists() {
+        return Ok(Vec::new());
+    }
+
+    let data = fs::read_to_string(&file_path).map_err(|e| e.to_string())?;
+    let entries: Vec<JournalEntry> = serde_json::from_str(&data).unwrap_or_else(|_| vec![]);
+    Ok(entries)
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
-        .invoke_handler(tauri::generate_handler![add_journal_entry])
+        .invoke_handler(tauri::generate_handler![add_journal_entry, get_journal_entries])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
