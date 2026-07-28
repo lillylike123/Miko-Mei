@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=""UTF-8">
+        <title>Miko Mei - Productivity Journal</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="journal-wrapper">
+            <div class="card main-card">
+                <h1>✨ Miko's Journal ✨</h1>
+                <p class="subtitle">Log your daily activites!!!</p>
+
+                <textarea  id="journalInput" placeholder="Write about your code, projects, tasks, or dreams today..."></textarea>
+<button id="saveBtn">💾 Save Entry!</button>
+<p id="status"></p>
+            </div>
+
+            <div class="card log-card">
+                <h2>📜 Past Entries Log :)</h2>
+                <div id="logContainer">
+                    <p class="empty-log">No entries saved yet. Start writing above!</p>
+                </div>
+            </div>
+        </div>
+       <script type="module" src="./main.js"></script>
+    </body>
+</html>

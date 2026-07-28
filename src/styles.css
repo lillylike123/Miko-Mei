@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.journal-wrapper {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.card {
+    background: #252538;
+    border: 3px solid #f5e0dc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 6px 6px 0px #f5e0dc33;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h1, h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.85rem;
+    color: #f5c2e7;
+    text-align: center;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 0.75rem;
+    color: #89b4fa;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #a6adc8;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 140px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px dashed #fab387;
+    background: #181825;
+    color: #cdd6f4;
+    resize: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #f5c2e7;
+    background: #11111b;
+}
+
+button {
+    background-color: #a6e3a1;
+    color: #11111b;
+    border: 2px solid #11111b;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.65rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #11111b;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button:hover {
+    background-color: #94e2d5;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px #11111b;
+}
+
+button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #11111b;
+}
+
+#status {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #a6e3a1;
+    min-height: 1rem;
+}
+
+#logContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.log-item {
+    background: #181825;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.log-date {
+    font-size: 0.7rem;
+    color: #f9e2af;
+    font-weight: bold;
+}
+
+.log-score {
+    font-size: 0.75rem;
+    color: #fab387;
+    align-self: flex-end;
+}
+
+.empty-log {
+    color: #6c7086;
+    text-align: center;
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-top: 40px;
+}
