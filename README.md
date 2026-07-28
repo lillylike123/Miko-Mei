@@ -1,7 +1,13 @@
-# Tauri + Vanilla
+# Miko Mei
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.
+Hellooo, welcome to Miko Mei!!! Miko Mei is a private, local-first digital journal that uses AI to analyze your daily entries, helping you identify trends in your mood and productivity without ever sharing your personal thoughts with the cloud! 
 
-## Recommended IDE Setup
+Currently with the prototype you are only able to type in the journaling text box, but all the UI and design are mostly finished!!! 
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+Miko Mei is made using love (Plus Javascript, HTML, CSS, and Rust) 
+Made for the Unfold ysws!!!
+
+Using Tauri as well <3
+
+
+![alt text](unfold-personal-mood-&-productivity-logger.png)
