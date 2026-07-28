@@ -10,4 +10,4 @@ Made for the Unfold ysws!!!
 Using Tauri as well <3
 
 
-u![alt text](image.png)
+![alt text](image.png)
